@@ -32,3 +32,22 @@ else:
             t = t +s[j]+str(c)
             c = 1
 print(t)
+
+
+Есть способ проще:
+
+s = input()
+s1 = s[0]
+c = 0
+itog = ''
+
+for i in s:
+  if i == s1:
+    c += 1
+  else:
+    itog += s1 + str(c)
+    s1 = i
+    c = 1
+
+itog += s1 + str(c)
+print(itog)
